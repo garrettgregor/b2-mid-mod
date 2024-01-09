@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EmployeesController < ApplicationController
   def show
     @employee = Employee.find(params[:id])

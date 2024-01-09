@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe '/employees/:id' do
@@ -103,8 +105,8 @@ RSpec.describe '/employees/:id' do
 
       within '#shared-tickets' do
         expect(page).to have_content('Shared Tickets')
-        expect(page).to have_content("#{@employee_6.name}")
-        expect(page).to have_content("#{@employee_1.name}")
+        expect(page).to have_content(@employee_6.name.to_s)
+        expect(page).to have_content(@employee_1.name.to_s)
       end
     end
   end
