@@ -12,8 +12,8 @@ class Employee < ApplicationRecord
   end
 
   def employees_with_shared_tickets
-    ticket_ids = self.tickets.pluck(:id)
-    employee_ids = EmployeeTicket.where(ticket_id: ticket_ids).where.not(employee_id: self.id).pluck(:employee_id).uniq
+    ticket_ids = tickets.pluck(:id)
+    employee_ids = EmployeeTicket.where(ticket_id: ticket_ids).where.not(employee_id: id).pluck(:employee_id).uniq
     Employee.where(id: employee_ids)
   end
 end
