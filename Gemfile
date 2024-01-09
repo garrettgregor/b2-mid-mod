@@ -54,9 +54,8 @@ group :development, :test do
   gem "pry"
   gem "rspec-rails"
   gem "simplecov"
-  gem "shoulda-matchers"
+  # gem "shoulda-matchers"
   gem "launchy"
-  gem "shoulda-matchers"
   gem "orderly"
 end
 
